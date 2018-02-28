@@ -1,7 +1,7 @@
 function capit(a, b){
 	a = a.split("");
 	b = b.split("");
-	//Checking!
+	//Debug!
 	//return a[0].match(/A-Z]/);
 	if (a[0].match(/[A-Z]/)!=null){
 	  b[0] = b[0].toUpperCase();}
