@@ -1,25 +1,14 @@
 // https://www.freecodecamp.org/challenges/sorted-union
 function uniteUnique(arr) {
-  var i = 0;
-  var acc = [];
-  //flattens the arguments to a single array
-  for (i;i<arguments.length;i++){
-    acc = acc.concat(arguments[i]);
+  var vessel = [];
+  /*Let's "flatten" the input*/
+  for (var i = 0; i<arguments.length; i++){
+    vessel = vessel.concat(arguments[i]);
   }
-  //checks the element at the j-th position
-  //for any duplicates at the k-th pos.
-  for (var j=0;j<acc.length-1;j++){
-    var k=j+1;
-    while (k<acc.length){  /*k is inside acc*/
-      if (acc[j]==acc[k]){ /*deletes k-th and rechecks k-th*/
-        acc.splice(k, 1);
-      }
-      else {               /*adds 1 to k and rechecks k-th*/
-        k++;
-      }
-    }
+  /*Time to erase the duplicates!*/
+  for (var k = 0; k < vessel.length; k++){
+    if (-1 == arr.indexOf(vessel[k])) arr.push(vessel[k]);
   }
-  arr = acc;
   return arr;
 }
 
